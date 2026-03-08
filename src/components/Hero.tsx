@@ -286,7 +286,7 @@ export const Hero: React.FC = () => {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-20 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500"
+        className="absolute bottom-20 md:bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-slate-500 hidden sm:flex"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
