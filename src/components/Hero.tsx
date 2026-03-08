@@ -156,20 +156,20 @@ export const Hero: React.FC = () => {
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* Outer perspective shell for 3D rings */}
+            {/* Outer perspective shell for 3D rings — desktop only to prevent mobile overflow */}
             <div className="relative" style={{ perspective: "1200px" }}>
 
-              {/* Pulsing aura glow */}
+              {/* Pulsing aura glow — hidden on mobile */}
               <motion.div
                 animate={{ scale: [1, 1.18, 1], opacity: [0.35, 0.65, 0.35] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute rounded-full pointer-events-none"
+                className="absolute rounded-full pointer-events-none hidden sm:block"
                 style={{ inset: "-30%", background: "radial-gradient(circle, rgba(6,182,212,0.35) 0%, rgba(168,85,247,0.2) 40%, transparent 70%)", filter: "blur(30px)" }}
               />
 
-              {/* Orbital ring 1 — equatorial */}
+              {/* Orbital ring 1 — equatorial — hidden on mobile */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute pointer-events-none hidden sm:block"
                 style={{ inset: "-14%", transformStyle: "preserve-3d", transform: "rotateX(72deg)" }}
               >
                 <motion.div
@@ -180,9 +180,9 @@ export const Hero: React.FC = () => {
                 />
               </div>
 
-              {/* Orbital ring 2 — inclined */}
+              {/* Orbital ring 2 — inclined — hidden on mobile */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute pointer-events-none hidden sm:block"
                 style={{ inset: "-22%", transformStyle: "preserve-3d", transform: "rotateX(55deg) rotateY(42deg)" }}
               >
                 <motion.div
@@ -193,9 +193,9 @@ export const Hero: React.FC = () => {
                 />
               </div>
 
-              {/* Orbital ring 3 — polar */}
+              {/* Orbital ring 3 — polar — hidden on mobile */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute pointer-events-none hidden sm:block"
                 style={{ inset: "-30%", transformStyle: "preserve-3d", transform: "rotateY(70deg) rotateX(12deg)" }}
               >
                 <motion.div
@@ -206,9 +206,9 @@ export const Hero: React.FC = () => {
                 />
               </div>
 
-              {/* Orbiting tech badge 1 */}
+              {/* Orbiting tech badge 1 — hidden on mobile */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute pointer-events-none hidden sm:block"
                 style={{ inset: "-14%", transformStyle: "preserve-3d", transform: "rotateX(72deg)" }}
               >
                 <motion.div
@@ -222,9 +222,9 @@ export const Hero: React.FC = () => {
                 </motion.div>
               </div>
 
-              {/* Orbiting tech badge 2 */}
+              {/* Orbiting tech badge 2 — hidden on mobile */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute pointer-events-none hidden sm:block"
                 style={{ inset: "-22%", transformStyle: "preserve-3d", transform: "rotateX(55deg) rotateY(42deg)" }}
               >
                 <motion.div
@@ -238,9 +238,9 @@ export const Hero: React.FC = () => {
                 </motion.div>
               </div>
 
-              {/* Orbiting tech badge 3 */}
+              {/* Orbiting tech badge 3 — hidden on mobile */}
               <div
-                className="absolute pointer-events-none"
+                className="absolute pointer-events-none hidden sm:block"
                 style={{ inset: "-30%", transformStyle: "preserve-3d", transform: "rotateY(70deg) rotateX(12deg)" }}
               >
                 <motion.div

@@ -92,7 +92,7 @@ export default function App() {
       <AnimatedBackground />
 
       {!showSplash && (
-        <main className="relative z-10">
+        <main className="relative z-10 pb-24 md:pb-0">
           <ThemeToggle />
           <Navigation />
           <Hero />

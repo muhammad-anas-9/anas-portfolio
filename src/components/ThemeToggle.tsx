@@ -34,7 +34,7 @@ export const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-50 p-3 rounded-full glass-panel shadow-lg text-slate-800 dark:text-slate-200 hover:scale-110 transition-transform hover:text-cyan-500 dark:hover:text-cyan-400"
+      className="fixed top-4 right-4 md:top-6 md:right-6 z-50 p-2.5 md:p-3 rounded-full glass-panel shadow-lg text-slate-800 dark:text-slate-200 hover:scale-110 transition-transform hover:text-cyan-500 dark:hover:text-cyan-400"
       aria-label="Toggle theme"
     >
       <motion.div
