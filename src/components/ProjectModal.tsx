@@ -185,7 +185,7 @@ export const ProjectModal: React.FC<Props> = ({ project, colorIndex, onClose }) 
 
                   {/* Video player */}
                   {showVideo && project.video ? (
-                    <div className="w-full bg-black aspect-video">
+                    <div className="w-full bg-black" style={{ aspectRatio: "16/9", maxHeight: "42vh" }}>
                       <iframe
                         key={project.video}
                         src={`${project.video}?rel=0&modestbranding=1&autoplay=1`}
