@@ -21,7 +21,7 @@ export const Contact: React.FC = () => {
   const github = resumeData.basics.links?.find((l) => l.name === "GitHub");
 
   return (
-    <section id="contact" className="relative py-28 px-6 max-w-5xl mx-auto">
+      <section id="contact" className="relative py-16 md:py-28 px-4 sm:px-6 max-w-5xl mx-auto">
       {/* Background glow orb */}
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full pointer-events-none"
@@ -61,8 +61,8 @@ export const Contact: React.FC = () => {
           whileTap={{ scale: 0.97 }}
           style={{ boxShadow: "0 8px 40px rgba(6,182,212,0.35)" }}
         >
-          <Send className="w-5 h-5" />
-          {resumeData.basics.email}
+          <Send className="w-5 h-5 shrink-0" />
+          <span className="text-sm sm:text-base break-all sm:break-normal">{resumeData.basics.email}</span>
         </motion.a>
 
         {/* Social links row */}

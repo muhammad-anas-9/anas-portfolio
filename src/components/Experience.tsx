@@ -26,7 +26,7 @@ export const Experience: React.FC = () => {
   return (
     <section
       id="experience"
-      className="relative py-24 px-6 max-w-5xl mx-auto min-h-screen"
+      className="relative py-16 md:py-24 px-4 sm:px-6 max-w-5xl mx-auto"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -34,13 +34,13 @@ export const Experience: React.FC = () => {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="mb-16 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl font-sans text-center">
+        <h2 className="mb-8 md:mb-16 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl font-sans text-center">
           Experience
         </h2>
 
         {/* Impact Highlights Panel */}
         {impactHighlights.length > 0 && (
-          <TiltCard className="mb-16 p-6 rounded-2xl glass-panel relative overflow-hidden group">
+          <TiltCard className="mb-8 md:mb-16 p-6 rounded-2xl glass-panel relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <h3 className="flex items-center gap-2 mb-4 text-lg font-semibold text-cyan-600 dark:text-cyan-400 font-mono uppercase tracking-widest relative z-10">
               <Zap className="w-5 h-5 text-yellow-500" />

@@ -28,14 +28,14 @@ const issuerConfig: Record<
     glow: "group-hover:shadow-[0_0_20px_rgba(0,120,212,0.25)]",
   },
   Snowflake: {
-    icon: <SiSnowflake className="w-7 h-7" />,
+    icon: <SiSnowflake size={28} />,
     color: "#29B5E8",
     bg: "from-[#29B5E8]/10 to-[#29B5E8]/5",
     border: "hover:border-[#29B5E8]/40",
     glow: "group-hover:shadow-[0_0_20px_rgba(41,181,232,0.25)]",
   },
   Coursera: {
-    icon: <SiCoursera className="w-7 h-7" />,
+    icon: <SiCoursera size={28} />,
     color: "#0056D2",
     bg: "from-[#0056D2]/10 to-[#0056D2]/5",
     border: "hover:border-[#0056D2]/40",
@@ -47,7 +47,7 @@ export const Certifications: React.FC = () => {
   return (
     <section
       id="certifications"
-      className="relative py-24 px-6 max-w-6xl mx-auto min-h-screen flex flex-col justify-center"
+      className="relative py-16 md:py-24 px-4 sm:px-6 max-w-6xl mx-auto"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -55,7 +55,7 @@ export const Certifications: React.FC = () => {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="mb-16 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl font-sans text-center">
+        <h2 className="mb-8 md:mb-16 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl font-sans text-center">
           Certifications & Awards
         </h2>
 

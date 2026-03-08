@@ -119,7 +119,7 @@ export default function App() {
                 transition={{ duration: 0.25 }}
                 onClick={scrollToTop}
                 aria-label="Back to top"
-                className="fixed bottom-8 right-8 z-50 p-3 rounded-full vibrant-gradient-bg text-white shadow-lg hover:scale-110 active:scale-95 transition-transform"
+                className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 p-3 rounded-full vibrant-gradient-bg text-white shadow-lg hover:scale-110 active:scale-95 transition-transform"
               >
                 <ArrowUp className="w-5 h-5" />
               </motion.button>

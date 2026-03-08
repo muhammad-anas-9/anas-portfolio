@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex flex-col items-center justify-center min-h-screen px-6 py-24 overflow-hidden"
+      className="relative flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 py-16 md:py-24 overflow-hidden"
     >
       {/* Vibrant Tech Grid Background Overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30 dark:opacity-20 pointer-events-none" />
@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
             rotateY: [0, 20, 0]
           }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-10 md:left-20 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/30 backdrop-blur-md border border-slate-200/60 dark:border-white/10 shadow-lg"
+          className="absolute top-1/4 left-10 md:left-20 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/30 backdrop-blur-md border border-slate-200/60 dark:border-white/10 shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d" }}
         >
           <Database className="w-8 h-8 text-cyan-500" />
@@ -77,7 +77,7 @@ export const Hero: React.FC = () => {
             rotateY: [0, -25, 0]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute top-1/3 right-10 md:right-32 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/30 backdrop-blur-md border border-slate-200/60 dark:border-white/10 shadow-lg"
+          className="absolute top-1/3 right-10 md:right-32 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/30 backdrop-blur-md border border-slate-200/60 dark:border-white/10 shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d" }}
         >
           <BarChart3 className="w-10 h-10 text-purple-500" />
@@ -90,7 +90,7 @@ export const Hero: React.FC = () => {
             rotateY: [0, -10, 0]
           }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-1/4 left-1/4 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/30 backdrop-blur-md border border-slate-200/60 dark:border-white/10 shadow-lg"
+          className="absolute bottom-1/4 left-1/4 p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/30 backdrop-blur-md border border-slate-200/60 dark:border-white/10 shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d" }}
         >
           <PieChart className="w-6 h-6 text-pink-500" />
@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="z-10 w-full max-w-6xl mx-auto">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-20">
           
           {/* Text Content */}
           <motion.div
@@ -112,11 +112,11 @@ export const Hero: React.FC = () => {
               <span>{resumeData.basics.location}</span>
             </div>
             
-            <h1 className="mb-6 text-5xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-7xl md:text-8xl font-sans">
+            <h1 className="mb-4 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-6xl md:text-7xl lg:text-8xl font-sans">
               {resumeData.basics.name}
             </h1>
             
-            <h3 className="mb-8 text-2xl font-light text-slate-700 dark:text-slate-300 sm:text-3xl md:text-4xl font-mono h-10 flex items-center justify-center lg:justify-start">
+            <h3 className="mb-6 text-xl font-light text-slate-700 dark:text-slate-300 sm:text-2xl md:text-3xl font-mono h-10 flex items-center justify-center lg:justify-start">
               <span className="vibrant-gradient-text font-bold mr-3">{">"}</span>
               <span className="vibrant-gradient-text font-medium">{typedText}</span>
               <motion.span 
@@ -126,7 +126,7 @@ export const Hero: React.FC = () => {
               />
             </h3>
             
-            <div className="max-w-2xl mx-auto lg:mx-0 mb-12 text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-sans glass-panel p-6 rounded-2xl relative overflow-hidden group">
+            <div className="max-w-2xl mx-auto lg:mx-0 mb-8 text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-sans glass-panel p-4 sm:p-6 rounded-2xl relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="relative z-10">{resumeData.basics.summary}</span>
             </div>
@@ -134,14 +134,14 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col items-center justify-center lg:justify-start gap-4 sm:flex-row">
               <button
                 onClick={() => handleScroll("experience")}
-                className="flex items-center gap-2 px-8 py-4 text-sm font-semibold text-white transition-all vibrant-gradient-bg rounded-full hover:scale-105 active:scale-95"
+                className="flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 text-sm font-semibold text-white transition-all vibrant-gradient-bg rounded-full hover:scale-105 active:scale-95"
               >
                 View Experience
                 <ArrowDown className="w-4 h-4" />
               </button>
               <a
                 href={`mailto:${resumeData.basics.email}`}
-                className="flex items-center gap-2 px-8 py-4 text-sm font-semibold text-slate-700 dark:text-slate-200 transition-all border border-slate-300 dark:border-white/15 rounded-full hover:bg-slate-100 dark:hover:bg-white/8 hover:text-slate-900 dark:hover:text-white hover:scale-105 active:scale-95 backdrop-blur-sm"
+                className="flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 text-sm font-semibold text-slate-700 dark:text-slate-200 transition-all border border-slate-300 dark:border-white/15 rounded-full hover:bg-slate-100 dark:hover:bg-white/8 hover:text-slate-900 dark:hover:text-white hover:scale-105 active:scale-95 backdrop-blur-sm"
               >
                 Contact Me
                 <Mail className="w-4 h-4" />
@@ -256,7 +256,7 @@ export const Hero: React.FC = () => {
 
               {/* Profile photo */}
               <motion.div
-                className="relative z-10 w-72 h-72 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700/60 backdrop-blur-sm group shadow-2xl"
+                className="relative z-10 w-52 h-52 sm:w-72 sm:h-72 lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700/60 backdrop-blur-sm group shadow-2xl"
                 whileHover={{ rotateY: 12, rotateX: -8, scale: 1.04 }}
                 transition={{ type: "spring", stiffness: 280, damping: 22 }}
                 style={{ transformStyle: "preserve-3d", backgroundColor: "#0f172a" }}
@@ -286,7 +286,7 @@ export const Hero: React.FC = () => {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500"
+        className="absolute bottom-20 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}

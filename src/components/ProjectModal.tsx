@@ -218,7 +218,7 @@ export const ProjectModal: React.FC<Props> = ({ project, colorIndex, onClose }) 
                 </div>
               )}
 
-              <div className="p-7 md:p-10">
+              <div className="p-4 sm:p-7 md:p-10">
 
                 {/* ── Title ── */}
                 <motion.h2

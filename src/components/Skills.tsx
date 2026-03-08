@@ -56,7 +56,7 @@ export const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="relative py-24 px-6 max-w-5xl mx-auto min-h-screen flex flex-col justify-center"
+      className="relative py-16 md:py-24 px-4 sm:px-6 max-w-5xl mx-auto"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -64,7 +64,7 @@ export const Skills: React.FC = () => {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="mb-16 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl font-sans text-center">
+        <h2 className="mb-8 md:mb-16 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl font-sans text-center">
           Skills &amp; Languages
         </h2>
 
