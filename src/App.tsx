@@ -6,6 +6,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "motion/react";
 import { ArrowUp } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 import { AnimatedBackground } from "./components/AnimatedBackground";
 import { Splash } from "./components/Splash";
 import { Hero } from "./components/Hero";
@@ -53,6 +54,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen text-slate-800 dark:text-slate-200 selection:bg-cyan-500/30 selection:text-cyan-900 dark:selection:text-cyan-100">
+      <Analytics />
       {/* Scroll progress bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-[2px] z-[60] origin-left"
