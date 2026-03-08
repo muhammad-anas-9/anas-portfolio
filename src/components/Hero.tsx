@@ -256,17 +256,20 @@ export const Hero: React.FC = () => {
 
               {/* Profile photo */}
               <motion.div
-                className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700/60 backdrop-blur-sm group shadow-2xl"
+                className="relative z-10 w-72 h-72 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700/60 backdrop-blur-sm group shadow-2xl"
                 whileHover={{ rotateY: 12, rotateX: -8, scale: 1.04 }}
                 transition={{ type: "spring", stiffness: 280, damping: 22 }}
-                style={{ transformStyle: "preserve-3d" }}
+                style={{ transformStyle: "preserve-3d", backgroundColor: "#0f172a" }}
               >
-                <img
-                  src="https://github.com/anasshakeel9.png?size=1024"
-                  alt={resumeData.basics.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
-                />
+                {/* Zoom wrapper crops transparent PNG corners */}
+                <div className="w-full h-full" style={{ transform: "scale(1.38)", transformOrigin: "center center" }}>
+                  <img
+                    src="/profile.png"
+                    alt={resumeData.basics.name}
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: "center center" }}
+                  />
+                </div>
                 {/* Holographic scanline overlay */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
