@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { resumeData } from "../data";
-import { ArrowDown, Mail, Terminal, Database, BarChart3, TrendingUp, BrainCircuit, GitBranch, Activity, LineChart, Layers, Code2, Sigma } from "lucide-react";
+import { ArrowDown, Mail, Terminal, Database, BrainCircuit, GitBranch, Sigma, Code2 } from "lucide-react";
 
 const ROLES = [
   "Data Analyst",
@@ -104,51 +104,7 @@ export const Hero: React.FC = () => {
           <GitBranch className="w-7 h-7 text-violet-400" />
         </motion.div>
 
-        {/* ── RIGHT SIDE — pushed left of nav (nav is at right-8, ~60px wide) ── */}
-        <motion.div
-          animate={{ y: [0, -20, 0], rotateX: [0, 18, 0] }}
-          transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute top-[10%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(251,113,133,0.12)", borderColor: "rgba(251,113,133,0.35)", boxShadow: "0 0 20px rgba(251,113,133,0.4)" }}
-        >
-          <TrendingUp className="w-8 h-8 text-rose-400" />
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, 28, 0], rotateX: [0, -15, 0], rotateY: [0, -25, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute top-[29%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(168,85,247,0.12)", borderColor: "rgba(168,85,247,0.35)", boxShadow: "0 0 20px rgba(168,85,247,0.4)" }}
-        >
-          <BarChart3 className="w-9 h-9 text-purple-400" />
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, 18, 0], rotateY: [0, 20, 0] }}
-          transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-          className="absolute top-[49%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(56,189,248,0.12)", borderColor: "rgba(56,189,248,0.35)", boxShadow: "0 0 20px rgba(56,189,248,0.4)" }}
-        >
-          <LineChart className="w-8 h-8 text-sky-400" />
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, -22, 0], rotate: [0, -8, 0] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-          className="absolute top-[67%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(99,102,241,0.12)", borderColor: "rgba(99,102,241,0.35)", boxShadow: "0 0 20px rgba(99,102,241,0.4)" }}
-        >
-          <Layers className="w-7 h-7 text-indigo-400" />
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, 14, 0], rotateZ: [0, 12, 0] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-          className="absolute bottom-[8%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(52,211,153,0.12)", borderColor: "rgba(52,211,153,0.35)", boxShadow: "0 0 20px rgba(52,211,153,0.4)" }}
-        >
-          <Activity className="w-7 h-7 text-emerald-400" />
-        </motion.div>
+        {/* ── RIGHT SIDE — removed: conflicts with fixed nav pill ── */}
 
       </div>
 
