@@ -58,66 +58,75 @@ export const Hero: React.FC = () => {
       {/* Floating 3D Elements — desktop only */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none perspective-1000">
 
-        {/* ── LEFT SIDE ── */}
+        {/* ── LEFT SIDE — evenly spaced top to bottom ── */}
         <motion.div
           animate={{ y: [0, -18, 0], rotateX: [0, 10, 0], rotateY: [0, 20, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-4 md:left-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          className="absolute top-[10%] left-4 md:left-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d", background: "rgba(6,182,212,0.12)", borderColor: "rgba(6,182,212,0.35)", boxShadow: "0 0 20px rgba(6,182,212,0.4)" }}
         >
           <Database className="w-8 h-8 text-cyan-400" />
         </motion.div>
 
         <motion.div
-          animate={{ y: [0, 22, 0], rotateX: [0, -12, 0], rotateY: [0, 15, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-          className="absolute top-[55%] left-4 md:left-10 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(52,211,153,0.12)", borderColor: "rgba(52,211,153,0.35)", boxShadow: "0 0 20px rgba(52,211,153,0.4)" }}
-        >
-          <BrainCircuit className="w-9 h-9 text-emerald-400" />
-        </motion.div>
-
-        <motion.div
           animate={{ y: [0, -14, 0], rotate: [0, 8, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute top-[40%] left-2 md:left-6 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          className="absolute top-[30%] left-4 md:left-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d", background: "rgba(251,191,36,0.12)", borderColor: "rgba(251,191,36,0.35)", boxShadow: "0 0 20px rgba(251,191,36,0.4)" }}
         >
           <Code2 className="w-7 h-7 text-amber-400" />
         </motion.div>
 
         <motion.div
+          animate={{ y: [0, 22, 0], rotateX: [0, -12, 0], rotateY: [0, 15, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+          className="absolute top-[50%] left-4 md:left-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          style={{ transformStyle: "preserve-3d", background: "rgba(52,211,153,0.12)", borderColor: "rgba(52,211,153,0.35)", boxShadow: "0 0 20px rgba(52,211,153,0.4)" }}
+        >
+          <BrainCircuit className="w-9 h-9 text-emerald-400" />
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, -16, 0], rotateX: [0, 15, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+          className="absolute top-[68%] left-4 md:left-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          style={{ transformStyle: "preserve-3d", background: "rgba(249,115,22,0.12)", borderColor: "rgba(249,115,22,0.35)", boxShadow: "0 0 20px rgba(249,115,22,0.4)" }}
+        >
+          <Sigma className="w-7 h-7 text-orange-400" />
+        </motion.div>
+
+        <motion.div
           animate={{ y: [0, 16, 0], rotateZ: [0, -10, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 3.5 }}
-          className="absolute bottom-1/4 left-6 md:left-12 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          className="absolute bottom-[8%] left-4 md:left-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d", background: "rgba(167,139,250,0.12)", borderColor: "rgba(167,139,250,0.35)", boxShadow: "0 0 20px rgba(167,139,250,0.4)" }}
         >
           <GitBranch className="w-7 h-7 text-violet-400" />
         </motion.div>
 
-        {/* ── RIGHT SIDE ── */}
-        <motion.div
-          animate={{ y: [0, 28, 0], rotateX: [0, -15, 0], rotateY: [0, -25, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute top-1/4 right-4 md:right-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(168,85,247,0.12)", borderColor: "rgba(168,85,247,0.35)", boxShadow: "0 0 20px rgba(168,85,247,0.4)" }}
-        >
-          <BarChart3 className="w-9 h-9 text-purple-400" />
-        </motion.div>
-
+        {/* ── RIGHT SIDE — pushed left of nav (nav is at right-8, ~60px wide) ── */}
         <motion.div
           animate={{ y: [0, -20, 0], rotateX: [0, 18, 0] }}
           transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute top-[15%] right-4 md:right-10 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          className="absolute top-[10%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d", background: "rgba(251,113,133,0.12)", borderColor: "rgba(251,113,133,0.35)", boxShadow: "0 0 20px rgba(251,113,133,0.4)" }}
         >
           <TrendingUp className="w-8 h-8 text-rose-400" />
         </motion.div>
 
         <motion.div
+          animate={{ y: [0, 28, 0], rotateX: [0, -15, 0], rotateY: [0, -25, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-[29%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          style={{ transformStyle: "preserve-3d", background: "rgba(168,85,247,0.12)", borderColor: "rgba(168,85,247,0.35)", boxShadow: "0 0 20px rgba(168,85,247,0.4)" }}
+        >
+          <BarChart3 className="w-9 h-9 text-purple-400" />
+        </motion.div>
+
+        <motion.div
           animate={{ y: [0, 18, 0], rotateY: [0, 20, 0] }}
           transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-          className="absolute top-[48%] right-3 md:right-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          className="absolute top-[49%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d", background: "rgba(56,189,248,0.12)", borderColor: "rgba(56,189,248,0.35)", boxShadow: "0 0 20px rgba(56,189,248,0.4)" }}
         >
           <LineChart className="w-8 h-8 text-sky-400" />
@@ -126,7 +135,7 @@ export const Hero: React.FC = () => {
         <motion.div
           animate={{ y: [0, -22, 0], rotate: [0, -8, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-          className="absolute bottom-1/3 right-4 md:right-10 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          className="absolute top-[67%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d", background: "rgba(99,102,241,0.12)", borderColor: "rgba(99,102,241,0.35)", boxShadow: "0 0 20px rgba(99,102,241,0.4)" }}
         >
           <Layers className="w-7 h-7 text-indigo-400" />
@@ -135,19 +144,10 @@ export const Hero: React.FC = () => {
         <motion.div
           animate={{ y: [0, 14, 0], rotateZ: [0, 12, 0] }}
           transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-          className="absolute bottom-1/4 right-3 md:right-6 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
+          className="absolute bottom-[8%] right-4 md:right-24 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
           style={{ transformStyle: "preserve-3d", background: "rgba(52,211,153,0.12)", borderColor: "rgba(52,211,153,0.35)", boxShadow: "0 0 20px rgba(52,211,153,0.4)" }}
         >
           <Activity className="w-7 h-7 text-emerald-400" />
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, -16, 0], rotateX: [0, 15, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-          className="absolute top-[68%] left-3 md:left-8 p-3 rounded-2xl backdrop-blur-md border shadow-lg hidden sm:block"
-          style={{ transformStyle: "preserve-3d", background: "rgba(249,115,22,0.12)", borderColor: "rgba(249,115,22,0.35)", boxShadow: "0 0 20px rgba(249,115,22,0.4)" }}
-        >
-          <Sigma className="w-7 h-7 text-orange-400" />
         </motion.div>
 
       </div>
