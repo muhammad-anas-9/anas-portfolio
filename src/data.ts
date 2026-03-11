@@ -3,7 +3,7 @@ export const resumeData = {
     name: "Muhammad Anas Shakeel",
     title: "Data Analyst | BI Developer",
     summary:
-      "Data Analyst and M.Sc. AI student blending analytical rigor with advanced machine learning techniques. Proven ability to architect scalable data pipelines, design executive dashboards, and translate complex datasets into strategic business insights.",
+      "Architecting scalable pipelines and translating complex data into strategic business intelligence. Dedicated to blending classical analytical rigor with next-generation machine learning techniques.",
     location: "Berlin, Germany",
     email: "anasshakeel9@gmail.com",
     phone: "+49 15753316338",
