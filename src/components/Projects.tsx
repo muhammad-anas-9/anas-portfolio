@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { resumeData } from '../data';
-import { FolderGit2, Database, TrendingUp, Zap, Coffee, Car, BarChart2, ArrowUpRight } from 'lucide-react';
+import { FolderGit2, Database, TrendingUp, Zap, Coffee, Car, BarChart2, ArrowUpRight, Bot } from 'lucide-react';
 import { ProjectModal } from './ProjectModal';
 import { TechBadge } from './TechBadge';
 
@@ -14,6 +14,7 @@ const getProjectIcon = (title: string) => {
   if (title.includes('Coffee')) return <Coffee className="w-7 h-7" />;
   if (title.includes('Electric')) return <Car className="w-7 h-7" />;
   if (title.includes('Leads')) return <BarChart2 className="w-7 h-7" />;
+  if (title.includes('Multimodal RAG')) return <Bot className="w-7 h-7" />;
   return <FolderGit2 className="w-7 h-7" />;
 };
 

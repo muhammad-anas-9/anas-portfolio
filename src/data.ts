@@ -57,6 +57,24 @@ export const resumeData = {
   achievements: [],
   projects: [
     {
+      title: "Multimodal RAG Knowledge Engine",
+      description:
+        "Developed an enterprise-grade Multimodal Retrieval-Augmented Generation (RAG) platform using LlamaParse, Qdrant, and Groq. The system processes complex PDF documents, extracts visual and structured data, and stores vector embeddings in Qdrant. A Next.js and Streamlit dual-interface allows users to toggle RAG grounding, view collapsible real-time reasoning thoughts, and monitor usage telemetry under strict token budget limits.",
+      outcomes: [
+        "Built a dual-interface frontend in Next.js/Tailwind and Streamlit to interact with the LLM",
+        "Integrated LlamaParse to accurately extract structured markdown text and figures from PDFs",
+        "Implemented real-time token tracking telemetry with an 85% warning threshold and a hard 50k limit",
+        "Wired collapsible 'AI Thought Process' blocks to expose the pipeline's reasoning and retrieval steps",
+        "Utilized Qdrant for memory-efficient document indexing and vector similarity search",
+      ],
+      image: "/project-rag.png",
+      githubUrl: "https://github.com/muhammad-anas-9/multimodal-knowledge-engine",
+      bullets: [
+        "Engineered an enterprise Multimodal RAG platform featuring LlamaParse PDF extraction, Qdrant vector search, live token telemetry, and collapsible reasoning logs in Next.js and Streamlit.",
+      ],
+      technologies: ["Next.js", "Streamlit", "LlamaIndex", "LlamaParse", "Qdrant", "FastAPI", "Python", "Tailwind CSS"],
+    },
+    {
       title: "End-to-End Analytics Engineering & Executive BI Dashboard",
       description:
         "Designed and built a multi-source ELT data pipeline integrating Xero, ActiveCampaign, and Karbon into BigQuery using APIs and Google Apps Script. Performed complex data transformation, normalization, and consolidation via a master SQL model to create a unified analytics layer — then delivered a multi-page Looker Studio dashboard surfacing executive-level KPIs and business insights across finance, operations, and client workflows.",
