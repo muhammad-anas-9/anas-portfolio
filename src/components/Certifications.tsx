@@ -56,7 +56,7 @@ export const Certifications: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         <h2 className="mb-8 md:mb-16 text-4xl font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl font-sans text-center">
-          Certifications & Awards
+          Certifications
         </h2>
 
         {/* Cert cards grid */}
