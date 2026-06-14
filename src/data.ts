@@ -202,6 +202,12 @@ export const resumeData = {
   ],
   certifications: [
     {
+      name: "Microsoft Fabric Analytics Engineer",
+      code: "DP-600",
+      issuer: "Microsoft",
+      url: "https://learn.microsoft.com/api/credentials/share/en-us/83827141/986DCEF3EA04E573?sharingId",
+    },
+    {
       name: "Microsoft Azure AI Fundamentals",
       code: "AI-900",
       issuer: "Microsoft",
