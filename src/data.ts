@@ -25,7 +25,7 @@ export const resumeData = {
   experience: [
     {
       company: "GE Vernova",
-      role: "Working Student Data Analytics",
+      role: "Working Student Data Analyst",
       dates: "November 2024 - Present",
       location: "Berlin, Germany",
       bullets: [
