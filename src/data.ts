@@ -69,6 +69,7 @@ export const resumeData = {
       ],
       image: "/project-rag.png",
       githubUrl: "https://github.com/muhammad-anas-9/multimodal-knowledge-engine",
+      liveUrl: "https://multimodal-knowledge-engine.vercel.app/",
       bullets: [
         "Engineered an enterprise Multimodal RAG platform featuring LlamaParse PDF extraction, Qdrant vector search, live token telemetry, and collapsible reasoning logs in Next.js and Streamlit.",
       ],
