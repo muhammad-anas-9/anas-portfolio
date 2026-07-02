@@ -9,6 +9,7 @@ type Project = {
   outcomes?: string[];
   image?: string;
   video?: string;
+  powerBiEmbedUrl?: string;
   dashboardUrl?: string;
   technologies?: string[];
   githubUrl?: string;
@@ -75,10 +76,10 @@ const modalColors = [
 export const ProjectModal: React.FC<Props> = ({ project, colorIndex, onClose }) => {
   const c = modalColors[colorIndex % modalColors.length];
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
+  const [activeTab, setActiveTab] = useState<'image' | 'video' | 'powerbi'>('image');
 
   // Reset media tab when project changes
-  React.useEffect(() => { setShowVideo(false); }, [project?.title]);
+  React.useEffect(() => { setActiveTab('image'); }, [project?.title]);
 
   // ESC to close modal or lightbox
   useEffect(() => {
@@ -152,39 +153,56 @@ export const ProjectModal: React.FC<Props> = ({ project, colorIndex, onClose }) 
             {/* Scrollable content */}
             <div className="overflow-y-auto flex-1 overscroll-contain">
 
-              {/* ── Media tabs (Screenshot / Demo Video) ── */}
-              {(project.image || project.video) && (
+              {/* ── Media tabs (Screenshot / Demo Video / Dashboard) ── */}
+              {(project.image || project.video || project.powerBiEmbedUrl) && (
                 <div className="shrink-0">
-                  {/* Tab switcher — only shown when both exist */}
-                  {project.image && project.video && (
-                    <div className="flex border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black/20">
-                      <button
-                        onClick={() => setShowVideo(false)}
-                        className={`flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold transition-colors ${
-                          !showVideo
-                            ? `${c.accent} border-b-2 border-current`
-                            : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
-                        }`}
-                      >
-                        <ImageIcon className="w-3.5 h-3.5" />
-                        Screenshot
-                      </button>
-                      <button
-                        onClick={() => setShowVideo(true)}
-                        className={`flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold transition-colors ${
-                          showVideo
-                            ? `${c.accent} border-b-2 border-current`
-                            : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
-                        }`}
-                      >
-                        <Play className="w-3.5 h-3.5" />
-                        Demo Video
-                      </button>
+                  {/* Tab switcher — only shown when there's more than one media type */}
+                  {((project.image && project.video) || (project.image && project.powerBiEmbedUrl) || (project.video && project.powerBiEmbedUrl)) && (
+                    <div className="flex flex-wrap border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black/20">
+                      {project.image && (
+                        <button
+                          onClick={() => setActiveTab('image')}
+                          className={`flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold transition-colors ${
+                            activeTab === 'image'
+                              ? `${c.accent} border-b-2 border-current`
+                              : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+                          }`}
+                        >
+                          <ImageIcon className="w-3.5 h-3.5" />
+                          Screenshot
+                        </button>
+                      )}
+                      {project.video && (
+                        <button
+                          onClick={() => setActiveTab('video')}
+                          className={`flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold transition-colors ${
+                            activeTab === 'video'
+                              ? `${c.accent} border-b-2 border-current`
+                              : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+                          }`}
+                        >
+                          <Play className="w-3.5 h-3.5" />
+                          Demo Video
+                        </button>
+                      )}
+                      {project.powerBiEmbedUrl && (
+                        <button
+                          onClick={() => setActiveTab('powerbi')}
+                          className={`flex items-center gap-1.5 px-5 py-2.5 text-xs font-semibold transition-colors ${
+                            activeTab === 'powerbi'
+                              ? `${c.accent} border-b-2 border-current`
+                              : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+                          }`}
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          Live Dashboard
+                        </button>
+                      )}
                     </div>
                   )}
 
-                  {/* Video player */}
-                  {showVideo && project.video ? (
+                  {/* Media player/viewer */}
+                  {activeTab === 'video' && project.video ? (
                     <div className="w-full bg-black" style={{ aspectRatio: "16/9", maxHeight: "42vh" }}>
                       <iframe
                         key={project.video}
@@ -192,6 +210,16 @@ export const ProjectModal: React.FC<Props> = ({ project, colorIndex, onClose }) 
                         title={project.title}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
+                        className="w-full h-full"
+                      />
+                    </div>
+                  ) : activeTab === 'powerbi' && project.powerBiEmbedUrl ? (
+                    <div className="w-full bg-slate-100 dark:bg-slate-900" style={{ aspectRatio: "16/9", maxHeight: "55vh" }}>
+                      <iframe
+                        title={project.title}
+                        src={project.powerBiEmbedUrl}
+                        frameBorder="0"
+                        allowFullScreen={true}
                         className="w-full h-full"
                       />
                     </div>

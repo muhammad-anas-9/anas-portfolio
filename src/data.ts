@@ -57,6 +57,23 @@ export const resumeData = {
   achievements: [],
   projects: [
     {
+      title: "Gearbox Condition Monitoring Dashboard",
+      description:
+        "Developed a comprehensive Reliability & Diagnostic Dashboard in Power BI using Excel datasets to monitor Wind Turbine Gearbox health. The dashboard visualizes critical condition metrics including multi-axis vibration vitals, bearing versus oil temperature comparisons, debris information, and a thermal matrix heatmap enabling proactive tracking of equipment uptime, system anomalies, and failure confidence scores.",
+      outcomes: [
+        "Visualized multi-axis vibration trends, temperature comparisons, and a thermal matrix heatmap for proactive fault detection",
+        "Tracked key reliability metrics including Uptime, Days Since Last Anomaly, and Failure Confidence Scores",
+        "Consolidated system readings, debris information, and oil pressure anomalies into a unified diagnostic view",
+        "Transformed raw Excel datasets into an interactive Power BI dashboard for real-time condition monitoring",
+      ],
+      image: "/project-gearbox.png",
+      video: "https://drive.google.com/file/d/1Lipy6SlMYb_5ugvxyW0D5x4eQfkyPIqD/preview",
+      bullets: [
+        "Developed a Gearbox Condition Monitoring Dashboard in Power BI using Excel data to track multi-axis vibrations, temperature anomalies, and overall equipment reliability.",
+      ],
+      technologies: ["Power BI", "Excel", "Data Visualization", "Condition Monitoring", "DAX"],
+    },
+    {
       title: "Multimodal RAG Knowledge Engine",
       description:
         "Developed an enterprise-grade Multimodal Retrieval-Augmented Generation (RAG) platform using LlamaParse, Qdrant, and Groq. The system processes complex PDF documents, extracts visual and structured data, and stores vector embeddings in Qdrant. A Next.js and Streamlit dual-interface allows users to toggle RAG grounding, view collapsible real-time reasoning thoughts, and monitor usage telemetry under strict token budget limits.",
