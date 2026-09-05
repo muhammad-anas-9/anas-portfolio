@@ -280,16 +280,34 @@ export const resumeData = {
       url: "https://achieve.snowflake.com/61df442b-f454-4c7b-8043-baf581f0f9c4#acc.a4NnqIVE",
     },
     {
-      name: "Python Project for Data Science",
+      name: "Python for Data Science, AI & Development",
       code: "Course",
       issuer: "Coursera",
-      url: "https://www.coursera.org/account/accomplishments/verify/6CAZ9NXZ7YKG",
+      url: "https://www.coursera.org/account/accomplishments/verify/JKNREJG5GX9X?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
     },
     {
       name: "Data Visualization with Excel and Cognos",
       code: "Course",
       issuer: "Coursera",
       url: "https://www.coursera.org/account/accomplishments/verify/N7JU3W7VADFC",
+    },
+    {
+      name: "Excel Basics for Data Analysis",
+      code: "Course",
+      issuer: "Coursera",
+      url: "https://www.coursera.org/account/accomplishments/verify/VZZZ5QMFLYGV?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+    },
+    {
+      name: "Databases and SQL for Data Science with Python",
+      code: "Course",
+      issuer: "Coursera",
+      url: "https://www.coursera.org/account/accomplishments/verify/JMT4KT58JT2K?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+    },
+    {
+      name: "Introduction to Data Analytics",
+      code: "Course",
+      issuer: "Coursera",
+      url: "https://www.coursera.org/account/accomplishments/verify/BSBBYUZBXQ9E",
     },
   ],
   awards: [
