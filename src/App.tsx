@@ -7,7 +7,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "motion/react";
 import { ArrowUp } from "lucide-react";
 import { AnimatedBackground } from "./components/AnimatedBackground";
-import { Splash } from "./components/Splash";
 import { Hero } from "./components/Hero";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
@@ -31,7 +30,6 @@ const SectionDivider: React.FC = () => (
 );
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [showBackToTop, setShowBackToTop] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -87,52 +85,48 @@ export default function App() {
         }}
       />
 
-      {showSplash && <Splash onComplete={() => setShowSplash(false)} />}
-
       <AnimatedBackground />
 
-      {!showSplash && (
-        <main className="relative z-10 pb-24 md:pb-0">
-          <ThemeToggle />
-          <Navigation />
-          <Hero />
-          <SectionDivider />
-          <Experience />
-          <SectionDivider />
-          <Projects />
-          <SectionDivider />
-          <Education />
-          <SectionDivider />
-          <Skills />
-          <SectionDivider />
-          <Certifications />
-          <SectionDivider />
-          <Contact />
+      <main className="relative z-10 pb-24 md:pb-0">
+        <ThemeToggle />
+        <Navigation />
+        <Hero />
+        <SectionDivider />
+        <Experience />
+        <SectionDivider />
+        <Projects />
+        <SectionDivider />
+        <Education />
+        <SectionDivider />
+        <Skills />
+        <SectionDivider />
+        <Certifications />
+        <SectionDivider />
+        <Contact />
 
-          {/* Back to top */}
-          <AnimatePresence>
-            {showBackToTop && (
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                transition={{ duration: 0.25 }}
-                onClick={scrollToTop}
-                aria-label="Back to top"
-                className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 p-3 rounded-full vibrant-gradient-bg text-white shadow-lg hover:scale-110 active:scale-95 transition-transform"
-              >
-                <ArrowUp className="w-5 h-5" />
-              </motion.button>
-            )}
-          </AnimatePresence>
+        {/* Back to top */}
+        <AnimatePresence>
+          {showBackToTop && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              transition={{ duration: 0.25 }}
+              onClick={scrollToTop}
+              aria-label="Back to top"
+              className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 p-3 rounded-full vibrant-gradient-bg text-white shadow-lg hover:scale-110 active:scale-95 transition-transform"
+            >
+              <ArrowUp className="w-5 h-5" />
+            </motion.button>
+          )}
+        </AnimatePresence>
 
-          <footer className="py-12 text-center text-slate-500 dark:text-slate-400 text-sm font-mono border-t border-slate-200 dark:border-white/5">
-            <p>
-              © {new Date().getFullYear()} Muhammad Anas Shakeel. All rights reserved.
-            </p>
-          </footer>
-        </main>
-      )}
+        <footer className="py-12 text-center text-slate-500 dark:text-slate-400 text-sm font-mono border-t border-slate-200 dark:border-white/5">
+          <p>
+            © {new Date().getFullYear()} Muhammad Anas Shakeel. All rights reserved.
+          </p>
+        </footer>
+      </main>
     </div>
   );
 }
