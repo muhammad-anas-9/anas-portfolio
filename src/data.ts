@@ -244,6 +244,12 @@ export const resumeData = {
       url: "https://learn.microsoft.com/api/credentials/share/en-us/83827141/986DCEF3EA04E573?sharingId",
     },
     {
+      name: "Microsoft Certified: Power BI Data Analyst Associate",
+      code: "PL-300",
+      issuer: "Microsoft",
+      url: "https://learn.microsoft.com/en-us/users/83827141/credentials/6f507f132ea54f0e?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+    },
+    {
       name: "Microsoft Azure AI Fundamentals",
       code: "AI-900",
       issuer: "Microsoft",
